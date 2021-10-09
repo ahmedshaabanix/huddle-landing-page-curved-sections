@@ -1,0 +1,95 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Start Container */
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Container*/
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  margin-bottom: 20px;
+}
+a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+.flex {
+  display: flex;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  border: 1px solid $VeryDarkCyan;
+  border-radius: 2px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px;
+  caret-color: auto;
+  outline: none;
+  width: 70%;
+  @include breakpoint-down(small) {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+}
+// Hide and show breakpoint
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}

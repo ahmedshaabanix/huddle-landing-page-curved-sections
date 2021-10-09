@@ -1,0 +1,33 @@
+// landing
+.landing {
+  margin-top: 100px;
+  text-align: center;
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content,
+  &__img {
+    width: 80%;
+    margin-bottom: 50px;
+    @include breakpoint-down(small) {
+      width: 90%;
+    }
+  }
+  &__content {
+    p {
+      width: 55%;
+      margin: 0 auto 30px;
+      @include breakpoint-down(small) {
+        width: 90%;
+      }
+    }
+  }
+  &__img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}

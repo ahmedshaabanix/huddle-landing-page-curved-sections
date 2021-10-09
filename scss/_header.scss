@@ -1,0 +1,12 @@
+// header
+
+.header {
+  padding: 30px 0;
+  &__logo {
+    width: 40%;
+  }
+  .nav {
+    justify-content: space-between;
+    align-items: center;
+  }
+}

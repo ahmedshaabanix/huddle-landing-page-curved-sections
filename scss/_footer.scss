@@ -1,0 +1,57 @@
+.footer {
+  background-color: $VeryDarkCyan;
+  color: white;
+  padding: 100px 0;
+  @include breakpoint-down(small) {
+    padding: 30px 0;
+  }
+  .flex {
+    justify-content: space-around;
+    @include breakpoint-down(small) {
+      padding-left: 20px;
+      padding-right: 20px;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+  > div {
+    flex: 1;
+
+    > * {
+      width: 40%;
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
+    }
+  }
+
+  .subscribe {
+    @include breakpoint-down(small) {
+      margin-bottom: 70px;
+    }
+    padding: 20px;
+    form {
+      width: 100%;
+      @include breakpoint-down(small) {
+        text-align: right;
+      }
+    }
+  }
+  &__icon {
+    margin-right: 7px;
+  }
+  ul.social-media {
+    a.circle {
+      color: #fff;
+      display: inline-flex;
+      margin-right: 30px;
+      font-size: 50px;
+      :hover {
+        color: aqua;
+      }
+    }
+
+    justify-content: flex-start;
+  }
+}
